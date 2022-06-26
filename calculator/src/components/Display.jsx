@@ -1,11 +1,12 @@
 import React from 'react';
+import { DisplayStyles } from './styles/Styles';
 
 function Display() {
     return (
-        <div>
-            this is a display
-        </div>
-    )
+        <DisplayStyles>
+            <p>this is a dispaly</p>
+        </DisplayStyles>
+    );
 }
 
 export default Display;
