@@ -1,10 +1,14 @@
 import React from 'react';
+import {number} from 'prop-types';
 
+FunctionButton.propTypes = {
+    buttonValue: number,
+};
 
-function FunctionButton(props) {
+function FunctionButton({buttonValue}) {
     return (
         <button type='button' className='functionButton'>
-            {props.buttonValue}
+            {buttonValue}
         </button>
     );
 }

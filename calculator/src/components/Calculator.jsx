@@ -13,7 +13,6 @@ function Calculator() {
     return (
         <CalculatorStyles>
             <div className='dispaly'>
-                <h1 className='header'>MY FIRST REACT CALCULATOR</h1>
                 <Display />
             </div>
             <div className='numPad'>

@@ -2,5 +2,5 @@
   text-align: center;
   min-height: 100vh;
   background-color: #c9e5e6;
-
+  display: grid;
 }

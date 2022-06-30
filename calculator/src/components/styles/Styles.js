@@ -1,13 +1,11 @@
 import styled from 'styled-components';
 
 export const CalculatorStyles = styled.div`
-    display: grid;
-    max-width: 420px;
-    margin: auto auto;
+    margin: auto;
     background-color: #ff6567;
     border: 1px solid #ef6060;
-    border-radius: 1.5%;
-    box-shadow: 0 6px 17px #808080;
+    border-radius: 12px;
+    box-shadow: 0 0px 20px #708090;
 
     .numPad {
         margin: 20px;
@@ -23,7 +21,7 @@ export const CalculatorStyles = styled.div`
         border: 2px solid #ff7d7f;
         border-radius: 20px;
         padding: 15px 10px; 
-        font-size: 20px;
+        font-size: 24px;
         font-weight: 700;
         background-color: #ff6567;
         color: #eeedee;
@@ -62,5 +60,31 @@ export const CalculatorStyles = styled.div`
 `;
 
 export const DisplayStyles = styled.div`
+    position: relative;
+	left: 0;
+	right: 0;
+    margin: 20px auto;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    color: #696969;
+    text-align: right;
+    max-width: 90%;
     
+    .displayHeader {
+        background-color: #DCDCDC;
+        border-radius: 10px 10px 0 0;
+        color: #A9A9A9;
+        text-align: center;
+        padding: 3px 0;
+    }
+
+    .displayResult {
+        padding: 3px 10px;
+        font-size: 3em;
+    }
+
+    .displayExpression {
+        padding: 5px 10px;
+        font-style: oblique;
+    }
 `;

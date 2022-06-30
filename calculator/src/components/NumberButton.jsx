@@ -1,9 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import {number} from 'prop-types';
+import {NumberContext} from './NumberProvider';
 
-function NumberButton(props) {
+NumberButton.propTypes = {
+    buttonValue: number,
+};
+
+function NumberButton({buttonValue}) {
+    const {handleSetDisplayValue} = useContext(NumberContext);
     return (
-        <button type='button' >
-            {props.buttonValue}
+        <button type='button' onClick={handleSetDisplayValue}>
+            {buttonValue}
         </button>
     );
 }
