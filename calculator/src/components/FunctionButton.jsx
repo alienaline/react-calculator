@@ -1,8 +1,8 @@
 import React from 'react';
-import {number} from 'prop-types';
+import {string} from 'prop-types';
 
 FunctionButton.propTypes = {
-    buttonValue: number,
+    buttonValue: string,
 };
 
 function FunctionButton({buttonValue}) {

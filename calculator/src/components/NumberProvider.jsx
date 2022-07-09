@@ -1,14 +1,25 @@
+/* eslint-disable no-unused-vars */
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 
 export const NumberContext = React.createContext();
 
-export function NumberProvider() {
-    const {number, setNumber} = useState('');
-    const {storedNumber, setStoredNumber} = useState(0);
-    const {functionType, setFunctionType} = useState();
+NumberProvider.propTypes = {
+    children: PropTypes.node.isRequired, 
+};
+
+export function NumberProvider(props) {
+    const [number, setNumber] = useState('');
+    const [storedNumber, setStoredNumber] = useState('0');
+    const [functionType, setFunctionType] = useState('');
 
     const handleSetDisplayValue = (props)=> {
-        return setNumber(number + props);
+        setNumber(number + props);
+    };
+
+    const handleSetStoredValue = () => {
+        setStoredNumber(number);
+        setNumber('');
     };
 
     const handleClearButton = () => {
@@ -17,10 +28,7 @@ export function NumberProvider() {
         setFunctionType('');
     };
 
-/*    const handleSetStoredValue = ()=> {
-
-    };
-
+/* 
     const handleToggleNegative = () => {
 
     };
@@ -39,8 +47,15 @@ export function NumberProvider() {
 */
 
     return (
-        <p>
-            this is a number Provider
-        </p>
+        <NumberContext.Provider value={{
+            number,
+            storedNumber,
+            functionType,
+            handleSetDisplayValue,
+            handleSetStoredValue,
+            handleClearButton,
+        }}>
+            {props.children}
+        </NumberContext.Provider>
     );
 }
