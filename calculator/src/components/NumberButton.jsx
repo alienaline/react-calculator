@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
-import {number} from 'prop-types';
+import PropTypes from 'prop-types';
 import { NumberContext } from './NumberProvider.jsx';
 
 
 NumberButton.propTypes = {
-    buttonValue: number,
+    buttonValue: PropTypes.any.isRequired,
 };
 
 function NumberButton({buttonValue}) {

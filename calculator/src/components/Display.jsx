@@ -3,16 +3,18 @@ import { DisplayStyles } from './styles/Styles';
 import { NumberContext } from './NumberProvider.jsx';
 
 function Display() {
-    const {storedNumber, functionType, number} = useContext(NumberContext);
+    const {storedNumber, operatorType, number} = useContext(NumberContext);
 
     return (
         <DisplayStyles>
             <p className='displayHeader'>Calculator</p>
-            <h2 className='displayResult'>
-                {number == '' ? '0' : number}
+            <h2 className='displayExpression'>
+                {storedNumber} {operatorType} {number}
             </h2>
-            <p className='displayExpression'>
-                {storedNumber} {functionType} 
+            <p className={
+                storedNumber.toString().length < 14 ? 'displayResult' : 'bigNumber'
+            }>
+                {number == '' ? storedNumber : number}
             </p>
         </DisplayStyles>
     );

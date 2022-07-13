@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { NumberContext } from './NumberProvider';
 
 function EqualButton() {
+    const {handleDoMath} = useContext(NumberContext);
+
     return (
-        <button type='button' className='equalButton functionButton'>
+        <button type='button' className='equalButton functionButton' onClick={() => handleDoMath()}>
             =
         </button>
     );

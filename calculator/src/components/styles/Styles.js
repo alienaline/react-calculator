@@ -78,13 +78,24 @@ export const DisplayStyles = styled.div`
         padding: 3px 0;
     }
 
-    .displayResult {
+    .displayExpression {
         padding: 3px 10px;
-        font-size: 3em;
+        font-style: oblique;
+        font-size: 18px;
+        font-weight: 400;
+        opacity: 80%;
     }
 
-    .displayExpression {
-        padding: 5px 10px;
-        font-style: oblique;
+    .displayResult {
+        padding: 0px 10px;
+        height: 65px;
+        font-size: 3em; 
+        font-weight: 700;
+    }
+
+    .bigNumber {
+        padding: 11.3px 10px;
+        font-size: 2em; 
+        font-weight: 700;
     }
 `;

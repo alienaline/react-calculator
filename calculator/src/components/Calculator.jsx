@@ -35,7 +35,7 @@ function Calculator() {
                 <div className='zeroButton'>
                     <NumberButton buttonValue={0} />
                 </div>
-                <FunctionButton buttonValue='.' />
+                <NumberButton buttonValue='.' />
                 <EqualButton />
             </div>
         </CalculatorStyles>
