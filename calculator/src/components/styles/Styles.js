@@ -6,6 +6,9 @@ export const CalculatorStyles = styled.div`
     border: 1px solid #ef6060;
     border-radius: 12px;
     box-shadow: 0 0px 20px #708090;
+    @media(max-width: 500px) {
+        margin: auto 20px;
+    }
 
     .numPad {
         margin: 20px;
@@ -13,6 +16,9 @@ export const CalculatorStyles = styled.div`
         grid-template-columns: repeat(4, 90px);
         justify-content: center;
         gap: 10px;
+        @media(max-width: 500px) {
+            grid-template-columns: repeat(4, 60px);
+        }
     }
 
     button {
@@ -30,6 +36,9 @@ export const CalculatorStyles = styled.div`
             background-color: #ff7d7f;
             border: 2px solid #ff7d7f;
             color: white;
+        }
+        @media(max-width: 500px) {
+            padding: 12px 10px;
         }
     }
 
@@ -69,7 +78,11 @@ export const DisplayStyles = styled.div`
     color: #696969;
     text-align: right;
     max-width: 90%;
-    
+    height: 120px;
+    @media(max-width: 500px) {
+        height: 110px
+    }
+
     .displayHeader {
         background-color: #DCDCDC;
         border-radius: 10px 10px 0 0;
@@ -84,18 +97,26 @@ export const DisplayStyles = styled.div`
         font-size: 18px;
         font-weight: 400;
         opacity: 80%;
+        @media(max-width: 500px) {
+            font-size: 15px;
+        }
     }
 
     .displayResult {
         padding: 0px 10px;
-        height: 65px;
         font-size: 3em; 
         font-weight: 700;
+        @media(max-width: 500px) {
+            font-size: 2.4em
+        }
     }
 
     .bigNumber {
         padding: 11.3px 10px;
-        font-size: 2em; 
+        font-size: 1.8em; 
         font-weight: 700;
+        @media(max-width: 500px) {
+            font-size: 1.4em
+        }
     }
 `;

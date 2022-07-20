@@ -14,13 +14,19 @@ export function NumberProvider(props) {
     const [operatorType, setOperatorType] = useState('');
 
     const handleSetDisplayValue = (num)=> {
-        if ((!number.includes('.') || num != '.') && number.length < 8) {
+        if ((!number.includes('.') || num != '.') && number.length < 9) {
             setNumber((number + num).replace(/^0+/, ''));
         }
     };
 
     const handleSetStoredValue = () => {
-        number == '' ? setStoredNumber('') : setStoredNumber(number);
+        if (number == '') {
+            setStoredNumber('');
+        } else if (number.startsWith('.')) {
+            setStoredNumber('0' + number);
+        } else {
+            setStoredNumber(number);
+        }
         setNumber('');
     };
 
@@ -68,7 +74,7 @@ export function NumberProvider(props) {
                 setOperatorType('');
                 setNumber('');
                 break;
-            case  '*':
+            case '*':
                 setStoredNumber(Math.round((a * b) * 100) / 100);
                 setOperatorType('');
                 setNumber('');
