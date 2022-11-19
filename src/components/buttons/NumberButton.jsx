@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { NumberContext } from './NumberProvider.jsx';
+import { NumberContext } from '../NumberProvider';
 
 
 NumberButton.propTypes = {

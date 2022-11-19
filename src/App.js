@@ -1,7 +1,7 @@
 import React from 'react';
-import Calculator from './components/Calculator';
 import { NumberProvider } from './components/NumberProvider';
 import './App.css';
+import Calculator from './components/containers/Calculator/Calculator';
 
 
 function App() {

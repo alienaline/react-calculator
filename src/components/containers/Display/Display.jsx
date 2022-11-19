@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { DisplayStyles } from './styles/Styles';
-import { NumberContext } from './NumberProvider.jsx';
+import { DisplayStyles } from './DisplayStyles';
+import { NumberContext } from '../../NumberProvider';
 
 function Display() {
     const {storedNumber, operatorType, number} = useContext(NumberContext);

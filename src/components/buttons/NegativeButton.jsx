@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { NumberContext } from './NumberProvider';
+import { NumberContext } from '../NumberProvider';
 
 function NegativeButton() {
     const {handleToggleNegative} = useContext(NumberContext);
